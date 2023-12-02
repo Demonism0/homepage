@@ -163,7 +163,7 @@ body {
   }
   .header {
     padding: 200px 100px 0 100px;
-    background: linear-gradient(150deg, rgb(48, 176, 255) 52%, white 0%);
+    background: linear-gradient(165deg, rgb(48, 176, 255) 60%, white 0%);
     display: block;
     position: relative;
   }
@@ -179,7 +179,6 @@ body {
   }
   #name {
     font-size: 100px;
-    bottom: auto;
     top: 0;
     right: -400px;
     text-shadow: gray 0 4px 4px;
@@ -269,5 +268,56 @@ body {
   picture {
     grid-row: 1 / 7;
     grid-column: 2 / 3;
+  }
+}
+@media (min-width: 1600px) {
+  .header {
+    display: grid;
+    align-items: center;
+    align-content: stretch;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+  }
+  .profile {
+    height: 50%;
+    margin-left: 200px;
+    margin-right: 200px;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+  #header-self {
+    grid-row: 1 / 4;
+    top: -100px;
+  }
+  .profile > .title,
+  .profile > .description {
+    grid-column: 2 / 4;
+  }
+  .profile > .title {
+    text-align: start;
+  }
+  .profile > .description {
+    font-size: 1.4rem;
+  }
+  .profile > .icons {
+    display: flex;
+    grid-column: 3 / 4;
+    width: 100%;
+  }
+  #name {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+  }
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .projects > .title {
+    grid-column: 1 / 4;
   }
 }
